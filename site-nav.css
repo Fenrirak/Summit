@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap');
+
+.topbar {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+    background: #16161a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    margin-bottom: 34px;
+}
+
+.topbar .nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.topbar .nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 15px 14px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: none;
+    white-space: nowrap;
+    text-decoration: none;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #a8a4ae;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.topbar .nav-links svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.7;
+    flex-shrink: 0;
+    opacity: 0.75;
+}
+
+.topbar .nav-links a:hover { color: #f1eaf5; }
+.topbar .nav-links a:hover svg { opacity: 1; }
+
+.topbar .nav-links a.active {
+    border-color: #a659b8;
+    color: #f4eef8;
+}
+.topbar .nav-links a.active svg { opacity: 1; }
+
+@media (max-width: 760px) {
+    .topbar { padding: 0; margin-bottom: 24px; }
+    .topbar .nav-links { width: 100%; justify-content: space-evenly; }
+    .topbar .nav-links a { padding: 12px 8px; font-size: 12px; }
+    .topbar .nav-links svg { width: 18px; height: 18px; }
+}
+
+/* floating back-to-top */
+.back-to-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 300;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1b1720;
+    border: 2px solid #a659b8;
+    color: #d6a0e6;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.2s ease;
+}
+.back-to-top svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+.back-to-top.visible {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+}
+.back-to-top:hover {
+    background-color: #2a2130;
+}
+
+/* site-nav.js sets opacity/transform inline on .pop-in elements inside a
+   .pop-group as the group scrolls into view. No JS, no hiding — plain page. */

@@ -1,0 +1,217 @@
+:root {
+    --accent: #a659b8;
+    --accent-line: rgba(166, 89, 184, 0.55);
+    --c-cream: #f6eefb;
+    --c-body: #e9e5ee;
+    --c-muted: #b9b2c2;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: #121016;
+    color: var(--c-body);
+    margin: 0;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px 30px;
+}
+
+h1, h2 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+    color: var(--c-cream);
+    margin: 0 0 18px 0;
+    line-height: 1.25;
+}
+
+h1 { font-size: 42px; }
+h2 { font-size: 28px; color: var(--accent); }
+
+p {
+    color: var(--c-body);
+    line-height: 1.75;
+    font-size: 17px;
+    margin: 0 0 16px 0;
+}
+
+.kicker {
+    display: inline-block;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #c88fda;
+    margin-bottom: 10px;
+}
+
+/* hero */
+.hero {
+    text-align: center;
+    padding: 34px 0 58px;
+}
+.hero p {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+}
+.hero-rule {
+    width: 90px;
+    height: 3px;
+    margin: 22px auto 32px;
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+/* policy timeline: Introduction / Problem / Current Policies / Our Policy / Summary */
+.timeline {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 46px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--accent-line);
+}
+.step {
+    position: relative;
+    scroll-margin-top: calc(var(--topbar-h, 58px) + 20px);
+    padding: 0 0 46px 0;
+}
+.step:last-child { padding-bottom: 6px; }
+.step-number {
+    position: absolute;
+    left: -46px;
+    top: 2px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #1b1720;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.step h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.step p:last-child { margin-bottom: 0; }
+
+.summary-card {
+    margin-left: -46px;
+    padding: 26px 28px;
+    border-radius: 10px;
+    background: #171219;
+    border: 2px solid var(--accent);
+}
+@media (max-width: 640px) {
+    .summary-card { margin-left: 0; }
+}
+.summary-card p { color: var(--c-cream); margin-bottom: 0; }
+
+.coalition-card {
+    padding: 30px 32px;
+    border-radius: 10px;
+    background: #171219;
+    border: 2px solid var(--accent);
+}
+.coalition-card p:last-child { margin-bottom: 0; }
+
+.partner-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+}
+.partner-logo img {
+    width: 340px;
+    max-width: 85%;
+    height: auto;
+    display: block;
+}
+
+/* closing / cross-links */
+.closing {
+    margin-top: 20px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+.cta-row a.section {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    border: 2px solid var(--accent);
+    color: var(--c-cream);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    background: transparent;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+.cta-row a.section:hover {
+    background: var(--accent);
+    color: #17121b;
+}
+
+/* home hero preview cards */
+.tab-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 8px;
+}
+@media (max-width: 700px) {
+    .tab-cards { grid-template-columns: 1fr; }
+}
+.tab-card {
+    display: block;
+    padding: 26px 20px;
+    border-radius: 10px;
+    background: #171219;
+    border: 2px solid var(--accent);
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.15s ease;
+}
+.tab-card:hover {
+    background: #201828;
+}
+.tab-card .tab-kicker {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--c-muted);
+    margin-bottom: 8px;
+}
+.tab-card .tab-title {
+    display: block;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--c-cream);
+    font-family: 'Comfortaa', sans-serif;
+}
