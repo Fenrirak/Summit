@@ -52,7 +52,6 @@ p {
     margin-bottom: 10px;
 }
 
-/* hero */
 .hero {
     text-align: center;
     padding: 34px 0 58px;
@@ -71,7 +70,6 @@ p {
     border-radius: 3px;
 }
 
-/* policy timeline: Introduction / Problem / Current Policies / Our Policy / Summary */
 .timeline {
     position: relative;
     margin-top: 10px;
@@ -146,7 +144,6 @@ p {
     display: block;
 }
 
-/* closing / cross-links */
 .closing {
     margin-top: 20px;
     padding-top: 40px;
@@ -163,7 +160,7 @@ p {
 .cta-row a.section {
     display: inline-block;
     padding: 12px 22px;
-    border-radius: 6px;
+    border-radius: 0;
     border: 2px solid var(--accent);
     color: var(--c-cream);
     text-decoration: none;
@@ -177,7 +174,6 @@ p {
     color: #17121b;
 }
 
-/* home hero preview cards */
 .tab-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
