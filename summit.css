@@ -186,7 +186,6 @@ p {
 .tab-card {
     display: block;
     padding: 26px 20px;
-    border-radius: 10px;
     background: #171219;
     border: 2px solid var(--accent);
     text-decoration: none;
